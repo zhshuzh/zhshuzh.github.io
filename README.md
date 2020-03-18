@@ -10,6 +10,6 @@
 
 ### 链接说明
 
-报告修改完后保存，链接就已经生成。以青委会为例，报告目录为/qingweihui/20200318，则生成的报告链接就是：
-[https://zhshuzh.github.io/qingweihui/20200318/index.html](https://zhshuzh.github.io/qingweihui/20200318/index.html)
+报告修改完后保存，链接就已经生成。以青委会为例，报告目录为/qingweihui/20200311，则生成的报告链接就是：
+[https://zhshuzh.github.io/qingweihui/20200311/index.html](https://zhshuzh.github.io/qingweihui/20200311/index.html)
 
