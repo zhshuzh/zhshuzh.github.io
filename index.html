@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报告列表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu{
+            width: 600px;
+            height: 290px;
+            border: 1px solid #ccc;
+            margin:50px auto;
+            padding-left: 40px;
+            list-style: none;
+        }
+
+        .menu .new_list{
+            width: 560px;
+            height: 50px;
+        }
+
+        .menu .news_list .news{
+            /*float: left;*/
+            font-size: 18px;
+            font-weight: 700;
+            font-family: "Microsoft YaHei";
+            line-height: 50px;
+            /*background-color: red;*/
+            border-bottom: 1px solid #ff0000;
+            display: inline-block;
+        }
+
+        .menu .news_list a{
+            color: #000;
+        }
+
+        .menu .news_list .more{
+            display: inline-block;
+            float: right;
+            line-height: 50px;  
+            margin-right: 50px;
+            color: #ccc;
+            /*border-bottom: 1px solid #ccc;*/
+            /*background-color: cyan;*/
+        }
+
+        .menu .news_list .line{
+            /*background-color: gold;*/
+            border-bottom: 1px solid #ccc;
+            width: 560px;
+        }
+
+        ul li div a{
+            text-decoration: none;
+        }
+
+        ul .list{
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            width: 560px;
+            margin:18px 0;
+            border-bottom: 1px dotted;
+        }
+
+        ul .list a{
+            color: #000;
+        }
+
+        ul .list .date{
+            float: right;
+        }
+
+        ul .list .point{
+            display: inline-block;
+            /*border: 1px solid red;*/
+            position: relative;
+            top: -7px;
+        }
+
+        ul .list .icon{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="news_list">
+            <div class="news"><a href="#">报告列表</a></div>
+            <div class="more"><a href="#">更多&gt&gt</a></div>
+            <div class="line"></div>
+        </li>
+        <li class="list">
+            <div>
+                <span class="icon"><img src="index/img/icon.jpg" alt=""></span>
+                <a href="5i5j/20190508/index.html">我爱我家-2019年5月8日-报告</a>
+                <span class="date">2019-06-23</span>
+            </div>
+        </li>
+        <li class="list">
+            <div>
+                <span class="icon"><img src="index/img/icon.jpg" alt=""></span>
+                <a href="5i5j/20191123/index.html">我爱我家-2019年11月23日-报告</a>
+                <span class="date">2019-11-24</span>
+            </div>
+        </li>
+        <li class="list">
+            <div>
+                <span class="icon"><img src="index/img/icon.jpg" alt=""></span>
+                <a href="qingweihui/20200224/index.html">青委会-2020年2月24日-报告</a>
+                <span class="date">2020-02-25</span>
+            </div>
+        </li>
+        <li class="list">
+            <div>
+                <span class="icon"><img src="index/img/icon.jpg" alt=""></span>
+                <a href="qingweihui/20200311/index.html">青委会-2020年3月11日-报告</a>
+                <span class="date">2020-03-13</span>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
