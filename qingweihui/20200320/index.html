@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    (function(){
+      let computed= function () {
+      let desW=750;//设计稿宽度
+      let devW=document.documentElement.clientWidth;//当前设备的宽度
+      if(devW>=desW){
+          document.documentElement.style.fontSize="100px";
+          return false;
+      }else{
+          document.documentElement.style.fontSize=devW/desW*100+"px";
+      }
+  }
+  computed();
+  window.addEventListener("resize",computed,false)})()
+  </script>
+  <link rel="stylesheet" href="./assets/style/reset.css" type="text/css" />
+  <link rel="stylesheet" href="./assets/style/index.css" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <section class="title-wrap">
+      <h1>青委会企业信息月报</h1>
+      <h2><span>3月26日 0:00</span>——<span>3月26日 0:00</span></h2>
+    </section>
+    <main class="modules" id="modules">
+      
+    </main>
+    <footer>
+      <img src="./assets/images/footer-bg.png" alt="">
+    </footer>
+  </div>
+  <script>
+    var data = [
+      {
+        imgSrc:"./assets/images/module-title-1.png",
+        content:[
+          {
+            title:"腾讯入股新希望集团旗下公司",
+            text:"3月12日，腾讯产业创投有限公司出资五千万，成为新腾数致网络科技有限公司第二大股东。"
+          },
+          {
+            title:"VIPKID入选全球最佳客户服务榜单",
+            text:"近日，有“商界奥斯卡”之称的Stevie Award公布《2020年度最佳销售与客户服务企业》榜单。中国在线青少儿英语教育品牌VIPKID荣获全球最佳客户服务奖铜奖，成为唯一入选的中国企业。"
+          },
+          {
+            title:"银河航天成功自主研制首颗卫星",
+            text:"快手商业化发布“品牌掌柜计划”，美的、自然堂、森马、巴拉巴拉、美特斯邦威等成为首批入驻的优质品牌。根据此计划，品牌可获得从曝光到CRM管理，再到小店分销的闭环；创作者可以获得品牌授权的优质好货、专供优惠价格、更灵活的分销模式和运营指导等扶持政策。"
+          },
+          {
+            title:"京东数科入选《Fast Company》全球最具创新力公司榜单",
+            text:"3月11日，日前全球三大商业媒体品牌之一的《Fast Company》发布2020年全球最具创新力公司榜单，京东数字科技集团入选全球数字科技类企业TOP10，并成为该榜单中唯一一家中国公司。"
+          }
+        ]
+      },
+      {
+        imgSrc:"./assets/images/module-title-2.png",
+        content:[
+          {
+            title:"是否下调全年发展目标，国家统计局回应",
+            text:"3月16日国务院新闻办举行2020年1-2月份国民经济运行情况新闻发布会。新闻发言人毛盛勇介绍2020年1-2月份经济运行情况新闻发布会。新闻发言人毛盛勇介绍2020年1-2月份国民经济运行情况。对于今年是否会下调全年发展目标的问题，毛国民经济运行情况。对于今年是否会下调全年发展目标的问题，毛盛勇回应说，还要看“两会”政府工作报告。盛勇回应说，还要看“两会”政府工作报告。"
+          },
+          {
+            title:"两部门印发《关于加快建立绿色生产和消费法规政策体系的意见》",
+            text:"3月17日，国家发展改革委、司法部印发《关于加快建立绿色生产和消费法规政策体系的意见》，提出了推行绿色设计、强化工业清洁生产、发展工业循环经济、加强工业污染治理、促进能源清洁发展、推进农业绿色发展、促进服务业绿色发展、扩大绿色产品消费、推行绿色生活方式等多项任务。"
+          },
+          {
+            title:"G7领导人：将“不惜代价” 采取一切必要经济政策",
+            text:"3月17日，七国集团（G7）领导人周一承认疫情给世界经济带来重大风险，并表示将采取一切必要的经济政策。七国集团希望，中央银行在疫情之下保持协调，领导人表示经济政策是“不惜代价”。七国集团正在动用货币和财政手段抗击冠状病毒，将协调抗病毒的医学研究。"
+          }
+        ]
+      }
+    ]
+    var modulesEle = document.getElementById("modules");
+    var html = '';
+    for(var i = 0;i<data.length;i++){
+      var item = data[i];
+      html += '<div class="module-item">';
+        html += '<div class="module-item-title"><img src="'+item.imgSrc+'" alt=""/></div>';
+        html += '<div class="module-content">  ';
+          html += '<ul>';
+          for(var j = 0;j<item.content.length;j++){
+            var v = item.content[j]
+            html += '<li>';
+            html += '<h3 class="content-item-title">';
+            html += '<span class="index">'+(j+1)+'</span>';
+            html += '<span class="title-text">'+v.title+'</span>';
+            html += '</h3>';
+            html += '<p class="content-item-text">'+v.text+'</p>';
+            html += '</li>';
+          }
+          html += '</ul>';
+        html += ' </div>';
+      html += '</div>';
+    }
+    modulesEle.innerHTML = html;
+  </script>
+</body>
+</html>
