@@ -1,6 +1,6 @@
 .container{
   max-width: 7.5rem;
-  background: url("../images/page-bg.png") no-repeat top center;
+  background: url("../images/page-bg.png") no-repeat top center / 100%;
   /* background-size: cover; */
   margin:0 auto;
   position: relative;
@@ -49,6 +49,7 @@
 }
 .content-item-title{
   overflow: hidden;
+  line-height: .36rem;
   font-size: .28rem;
   color:#5B7B72;
 }
